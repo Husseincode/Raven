@@ -1,0 +1,218 @@
+@media screen and (max-width: 767px)
+{
+    :root
+    {
+        --border: 1px solid grey;
+        --background-color: #007bff;
+    }
+    body
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.72)
+    }
+    header
+    {
+        width: 100%;
+        height: 70px;
+        background-color: var(--background-color);
+    }
+    header > nav
+    {
+        width: 99.6%;
+        height: 69px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header > nav > div
+    {
+        padding: 10px;
+        display: flex;
+    }
+    header > nav > div > h1
+    {
+        padding-top: 10px;
+    }
+    header > nav > div > i
+    {
+        font-size: 20px;
+        padding-top: 10px;
+        font-weight: 500;
+        font-style: oblique;
+    }
+    header > nav > span
+    {
+        padding: 25px 10px;
+    }
+    .overlay_card
+    {
+        display: none;
+        position: absolute;
+        top: 40%;
+        left: 3%;
+        border-radius: 10px;
+        width: 94%;
+        height: 20vh;
+        background: rgb(32, 33, 35);
+        z-index: 1;
+    }
+    .warning_content
+    {
+        display: none;
+        position: absolute;
+        top: 40%;
+        left: 3%;
+        border-radius: 10px;
+        width: 94%;
+        min-height: 7vh;
+        padding-top: 15px;
+        background: rgb(32, 33, 35);
+        z-index: 1;
+    }
+    .flex_format
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .grid-format
+    {
+        display: grid;
+        place-content: center;
+    }
+    .overlay_card > i, .warning_content > i
+    {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    /*main*/
+    main
+    {
+        width: inherit;
+        min-height: 500px;
+    }
+    main > div
+    {
+        width: 90%;
+        margin: 20px 10px;
+        display: grid;
+        align-items: center;
+    }
+    main > div:first-child
+    {
+        margin-top: 50px;
+    }
+    main > div > form
+    {
+        width: 100%;
+        background: transparent;
+    }
+    main > div > form > label
+    {
+        width: inherit;
+    }
+    main > div > form > label > input
+    {
+        background: transparent;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 1px solid grey;
+        width: 80%;
+        outline-style: none;
+    }
+    .textare
+    {
+        display: none;
+        background: transparent;
+        outline-style: none;
+    }
+    .textare > div > button
+    {
+        position: relative;
+    }
+    #do_not_save
+    {
+        background: rgb(32, 33, 35);
+    }
+    .textare > textarea
+    {
+        margin-top: 10px;
+        background: transparent;
+        outline-style: none;
+        padding: 10px;
+        height: 3cm;
+        resize: none;
+    }
+    .laschif
+    {
+        display: grid;
+    }
+    .saved_notes
+    {
+        min-height: 500px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .saved_notes > div
+    {
+        background: transparent;
+        cursor: pointer;
+        overflow: hidden;
+        height: 120px;
+    }
+    .card-header
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .ellipses
+    {
+        font-weight: bold;
+    }
+    .note_page
+    {
+        overflow-x: auto;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 30vh;
+        position: relative;
+    }
+    .note_page > .fa-close
+    {
+       position: absolute;
+       right: 0px;
+    }
+    .note_page > p
+    {
+        margin-top: 40px;
+    }
+    /*footer*/
+    footer
+    {
+        height: 350px;
+        width: 100%;
+        display: grid;
+        background: rgba(32, 33, 35, 0.72);
+    }
+    footer > h3
+    {
+        text-decoration: underline;
+        padding-top: 10px;
+    }
+    footer > p
+    {
+        font-size: 15px;
+        padding: 10px;
+    }
+    *
+    {
+        font-family:'Times New Roman', Times, serif;
+    }
+}

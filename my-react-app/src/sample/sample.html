@@ -1,0 +1,92 @@
+<html lang="en-US" contenteditable="false" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note pad</title>
+    <link rel="stylesheet" href="./sample.css">
+    <!--Bootstrap-->
+    <!--Universal Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-dark">
+    <header class="bg-primary shadow">
+        <nav>
+            <div>
+                <h1 class="text-dark">CVD</h1>
+                <i class="text-dark">Notepad</i>
+            </div>
+            <span style="font-size: 20px;" class="fa fa-search text-dark"></span>
+        </nav>
+    </header>
+    <main>
+        <div class="fs_div">
+            <form class="formed">
+                <label for="attach">
+                    <input maxlength="10" autofocus autocomplete class="text-white" placeholder="Create, view or delete file ..." type="text" name="quicknotes" id="folder">
+                    &nbsp;
+                    <i title="Delete file" style="font-size: 25px;" id="delete" class="fa fa-trash-o"></i>
+                    &nbsp;
+                    <i title="View note" style="font-size: 25px;" id="see" class="fa fa-eye"></i>
+                </label>
+            </form>
+        </div>
+        <div class="laschif">
+            <form id="text" class="textare">
+                <div>
+                    <button value="Save" type="button" id="save" class="btn btn-primary text-white">Save <i class="fa fa-file"></i></button>
+                    <button value="Cancel" type="button" id="do_not_save" class="btn btn-dark text-white">Cancel <i class="fa fa-close"></i></button>
+                    <button type="button" disabled class="text-white btn btn-dark" style="float: right;">Length <span id="length">0</span></button>
+                </div>
+                <textarea autofocus class="text-white" name="" id="given_title" ></textarea>
+            </form>
+        </div>
+        <div class="saved_notes">
+            
+        </div>
+        <!--View notes-->
+        <div class="note_page">
+            <!--Exit the note_page-->
+            <i style="font-size: 25px;" id="exit_note_page" class="fa fa-close text-white"></i>
+        </div>
+    </main>
+    <footer class="text-secondary text-center">
+        <h3>Notepad</h3>
+        <div class="m-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quas modi
+            , laudantium aperiam incidunt sapiente at ipsa vel, delectus non porro repellen
+            dus, architecto dolorem iste itaque vero inventore! Illum, eius.
+        </div>
+        <div class="m-2">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-whatsapp"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <time>
+            Notepad &copy; 2023
+        </time>
+    </footer>
+    <!--Delete Overlay card-->
+    <div class="shadow overlay_card">
+        <i style="font-size: 25px;" class="fa fa-close text-white exit"></i>
+        <span class="text-secondary delete_file_warning">Are you sure you want to delete?</span><br>
+        <div>
+            <button id = "remove" type="button" class="btn btn-danger text-white">Delete File</button>
+            <button id = "cancel" type="button" class="btn btn-primary text-white m-1">Cancel Action</button>
+        </div>
+    </div>
+    <!--End overlay card-->
+
+    <!--Warning card-->
+    <div class="shadow warning_content text-center">
+        <i style="font-size: 25px;" class="fa fa-close text-white exit_warning"></i>
+        <p id="paragraph" class="text-secondary"></p>
+    </div>
+    <!--End warning card-->
+    <script src="./sample.js" type="text/javascript"></script>
+</body>
+</html>

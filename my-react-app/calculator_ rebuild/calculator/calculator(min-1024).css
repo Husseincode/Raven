@@ -1,0 +1,169 @@
+@media screen and (min-width: 1024px)
+{
+    :root
+    {
+        --border: 1px solid grey;
+    }
+    body{
+        background:rgba(32, 33, 36, 0.923);
+        color: white;
+    }
+    body>header{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        background: linear-gradient(180deg, dodgerblue, rgb(7, 60, 112));
+        background-size: cover;
+        border-bottom: transparent
+    }
+    body>header>nav{
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        padding: 3vh 0;
+    }
+    body>header>nav>.show{
+        display: flex;
+        justify-content: flex-start;
+    }
+    body>header>nav>div{
+        display:flex;
+        justify-content: space-around;
+    }
+    body>header>nav>div>span{
+        cursor: pointer;
+        margin-left: 2vw;
+        margin-top: 10px;
+    }
+    .fa-bars{
+        display: none;
+    }
+    .overlay{
+        width: 100%;height: 0px;
+        position:fixed;top:0;background:rgb(32, 33, 36);
+        z-index:1;display:grid;place-content:center;
+        transition: 0.4s;
+        visibility: hidden;
+    }
+    .toggle_overlay{
+        height: 100px;
+        visibility: visible;
+    }
+    .overlay>form{
+        width: 1500px;height:50px;
+        display:flex;justify-content:space-between;
+    }
+    .overlay>form>label{
+        display:flex;
+    }
+    .overlay>form>label>input{
+        width: 1000px;background:transparent;
+        border:1px solid grey;padding-left:20px;
+        caret-color:white;
+        outline:none;color:white
+    }
+    .overlay>form>label>button{
+        border-radius:0px;
+        border: 1px solid grey;
+    }
+    .overlay>form>a{
+        padding-top:15px;text-decoration:none;
+        cursor: pointer;
+    }
+    .fa-yelp{
+        padding: 1vh;
+    }
+    *
+    {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    main
+    {
+        display: grid;
+        place-content: center;
+    }
+    main > div
+    {
+        width: 1000px;
+        display: grid;
+        place-content: center;
+    }
+
+    #calculator
+    {
+        width: 500px;
+        height: 700px;
+        border-radius: 10px;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+    #calculator > div:first-child
+    {
+        height: 30px;
+        background: rgba(32, 33, 36, 0.923);;
+        border-radius: 10px 10px 0px 0px;
+        filter: brightness(70%);
+    }
+    #calculator > div:first-child > span:first-child
+    {
+        margin-left: 10px;
+    }
+    #calculator > div:first-child > span
+    {
+        padding: 5px;
+    }
+    #calculator > div:last-child
+    {
+        background:rgba(100%, 100%, 100%, 10%);
+        backdrop-filter: blur(50px);
+        height: inherit;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .result_container
+    {
+        background:rgba(100%, 100%, 100%, 10%);
+        backdrop-filter: blur(50px);
+        width: inherit;
+        height: 80px;
+        border-radius: 10px;
+        border: 1px solid white;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 30px;
+    }
+    .result_container > div:first-child
+    {
+        margin-top: -10px;
+        overflow: hidden;
+    }
+    .result_container > div:last-child
+    {
+        margin-top: 20px;
+    }
+    .buttons
+    {
+        height: 550px;
+        width: inherit;
+        margin: 20px 0px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+    }
+    .buttons > button
+    {
+        border: 1px solid white;
+        font-size: 25px;
+    }
+    .buttons > .filter
+    {
+        background:rgba(100%, 100%, 100%, 10%);
+        backdrop-filter: blur(50px);
+    }
+}

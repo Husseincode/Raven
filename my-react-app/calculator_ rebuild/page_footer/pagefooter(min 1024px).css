@@ -1,0 +1,58 @@
+:root{
+    --bgcolor: rgba(32, 33, 36, 0.923);
+    --padding: 40px;
+    --display: flex;
+    --j_content: center;
+    --f_direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    /* Your CSS rules for large screens here */
+    body{
+        display: var(--display);
+        justify-content: var(--j_content);
+        flex-direction: var(--f_direction);
+        background: var(--bgcolor);
+    }
+    footer{
+        width:  100%;
+        display: grid;
+        place-content: center;
+        background: var(--bgcolor);
+        margin-top: 100px;
+        padding: var(--padding);
+    }
+    section{
+        width: 1000px;
+    }
+    h5{
+        padding: 7px 0px 0px 5px;
+    }
+    .show{
+        display: flex;
+        width: 200px;
+        border-radius:0px 50px 50px 0px;
+    }
+    .show > span{
+        padding-left: 10px;
+    }
+    .show > span > i {
+        padding-top: 10px;
+    }
+    .embody-text > p:first-child{
+        padding-top: 20px;
+    }
+    .social_media_icons{
+        display: flex;
+        flex-direction:column;
+    }
+    .social_media_icons > a:first-child {
+        padding-top: 20px;
+    }
+    .social_media_icons > a {
+        padding-top: 10px;
+    }
+    .Right_reserved{
+        padding-top: 20px;
+    }
+  }

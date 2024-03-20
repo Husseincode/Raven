@@ -1,0 +1,48 @@
+#root
+{
+    display: grid;
+    place-content: center;
+    transform: translate(0, 50%);
+    width: 100%;
+}
+
+article 
+{
+    /* border: 1px solid grey; */
+    width: 600px;
+    height: 370px;
+    display: grid;
+    place-content: center;
+}
+
+form > div > label
+{
+    padding-top: 27px;
+    font-size: 20px;
+}
+
+form > div > input
+{
+    background: transparent;
+    margin-left: 10px;
+    /* border: 1px solid grey; */
+    /* background-color: grey; */
+    border-left: none;
+    border-right: none;
+    outline-style: none;
+    width: 30vw;
+    transition: 1s;
+    color: white;
+    padding-top: 15px;
+}
+
+form > div > input:focus
+{
+    border-bottom: 1px solid white;
+}
+
+button
+{
+   float: right;
+   margin-top: 20px;
+}

@@ -1,0 +1,92 @@
+:root{
+    --width: 100%;
+    --border: 3px solid lightgrey;
+    --alignment: 0px 10px
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.mainPage{
+    width: var(--width);
+    /* border: var(--border); */
+    margin-top: 10px;
+    /* height: 500px; */
+}
+
+/* .mainPage > section{
+    border: var(--border);
+} */
+
+.mainPage > section > form{
+    display: flex;
+    flex-direction: column;
+    padding: var(--alignment)
+}
+
+.mainPage > section > form > label > input{
+    width: 250px;
+    padding: 0px 5px;
+    margin: 10px 0px 10px;
+    background: transparent;
+    border: 2px solid lightgrey;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    transition: 1s;
+}
+.mainPage > section > form > label > input:focus
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    border-bottom: 2px solid dodgerblue;
+}
+.cards{
+    /* border: var(--border); */
+    width: var(--width);
+    padding: var(--alignment);
+    display: grid;
+    row-gap: 30px;
+}
+
+.mainPage > section > form > select{
+    width: 200px;
+    /* background: transparent; */
+    color: white;
+}
+option{
+    color: white;
+}
+.card{
+    background: transparent;
+}
+.card:first-child{
+    margin-top: 30px;
+}
+.card:last-child{
+    margin-bottom: 30px;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.card-img{
+    height: 200px;
+    /* border: var(--border); */
+}
+
+@media screen and (min-width: 1024px){
+    body{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    body{
+        display: none;
+    }
+}
