@@ -1,0 +1,45 @@
+:root{
+    --width: 100%;
+    --border: 1px solid grey;
+    --alignment: 20px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.details{
+    padding: var(--alignment);
+}
+.calculator_outlay{
+    width: var(--width);
+    /* border: var(--border); */
+    height: inherit;
+    padding: 0px 20px;
+    margin: 0px 0px 30px;
+}
+.calculator{
+    width: inherit;
+    border: var(--border);
+    /* height: 600px; */
+    border-radius: 10px;
+}
+.header{
+    width: var(--width);
+    height: 50px;
+}
+.calculator > form > input{
+    width: var(--width);
+    height: 80px;
+    font-size: 30px;
+    padding: 0px 10px;
+}
+.buttons{
+    width: var(--width);
+    /* height: 470px; */
+    /* border: var(--border); */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 0px 10px;
+    margin: 10px 0px;
+}
