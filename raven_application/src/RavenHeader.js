@@ -9,17 +9,27 @@ let button_style = {
     border: '2px solid lightgrey'
 }
 const RavenHeader = ({title}) => {
-    const [condition, setCondition] = useState(false);
     const [icon, setIcon] = useState(faBars);
+    const [attributes, setAttributes] = useState({
+        width: '0px',
+        visibility: 'hidden'
+    })
 
     const handleClick = () => {
-        setCondition(!condition);
         if (icon === faBars)
         {
             setIcon(faClose);
+            setAttributes({
+                width: '220px',
+                visibility: 'visible'
+            });
         }
         else{
             setIcon(faBars);
+            setAttributes({
+                width: 0,
+                visibility: 'hidden'
+            });
         }
     };
     return (
@@ -32,12 +42,9 @@ const RavenHeader = ({title}) => {
                 </button>
             </nav>
         </header>
-        {
-            condition && 
-            <nav className='overflow bg-dark shadow'>
-                <Link to='/home' className='overflow_head'>{title}</Link>
-            </nav>
-        }
+        <nav style={attributes} className='overflow shadow bg-dark'>
+            <Link to='/home' className='overflow_head'>{title}</Link>
+        </nav>
         </>
     )
 }

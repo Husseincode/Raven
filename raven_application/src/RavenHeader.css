@@ -21,17 +21,18 @@ header > nav{
 }
 
 header > nav > h1{
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .overflow{
     position: fixed;
     top: 0;
-    width: 250px;
+    width: 0;
     height: 100%;
     z-index: 1;
     padding: 25px 10px;
     transition: 1s;
+    visibility: hidden;
     /* border: var(--border); */
 }
 .overflow_head{

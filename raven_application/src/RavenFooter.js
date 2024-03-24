@@ -6,7 +6,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const RavenFooter = ({title, whatsappHref, twitterHref, email, gitHubHref}) => {
     return (
-        <footer className='bg-dark text-secondary'>
+        <footer className='text-secondary bg-dark'>
             <section className='text-center'>
                 <h3>{title}</h3>
                 <p>Lorem ipsum dit amet Lorem ipsum dit amet Lorem ipsum dit amet</p>

@@ -16,10 +16,11 @@ const RavenMain = ({title}) => {
     };
     const searchValue = (e) => {
         const newSearch = data.filter(item => {
-            return (item.name.toLowerCase().includes(str));
+            return (item.name.charAt(0).toUpperCase().includes(str));
         });
         if (str === ''){
-            setCards(data)
+            setCards(data);
+            setCondition(false);
         }
         else{
             if (newSearch.length === 0)
@@ -37,11 +38,13 @@ const RavenMain = ({title}) => {
         let selectedCard = data.filter(item => {
             return (item.genre === e.target.value)
         })
-        if(e.target.value === '')
+        if(e.target.value === 'All calculator')
         {
             setCards(data);
         }
-        setCards(selectedCard);
+        else{
+            setCards(selectedCard);
+        }
     }
     const cardEffect = (e) => {
         let all_cards = document.querySelectorAll('.card');
@@ -67,7 +70,7 @@ const RavenMain = ({title}) => {
                     </label>
                     <span className='text-secondary'>Filter: </span>
                     <select className='text-black' onChange={(e)=>{selectOption(e)}} value={value}>
-                        <option value=''>Select an option</option>
+                        <option value='All calculator'>All calculator</option>
                         <option value='calculator'>Calculator</option>
                         <option value='solid shapes'>Mensuration</option>
                         <option value='sequence and series'>Sequence and series</option>
@@ -85,7 +88,7 @@ const RavenMain = ({title}) => {
                                         <div className='card-text text-center p-3'>{notes}</div>
                                     </div>
                                     <div className='card-footer'>
-                                        <Link to={href} type='button' className='btn btn-sm btn-dark'>Check</Link>
+                                        <Link to={href} type='button' className='btn btn-sm btn-dark text-white'>Check</Link>
                                         <div>{title}</div>
                                     </div>
                                 </div>

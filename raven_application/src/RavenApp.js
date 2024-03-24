@@ -16,7 +16,7 @@ const RavenApp = () => {
             setIsLoading(false);
         }, 5000);
         document.title = 'Raven';
-        document.body.setAttribute('class', 'text-white')
+        document.body.setAttribute('class', 'text-white');
     })
     if (loading)
     {
