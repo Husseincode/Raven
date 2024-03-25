@@ -8,9 +8,9 @@ const RavenNav = () => {
     return (
         <Router>
             <Routes>
-                <Route element={<RavenApp/>} path='/home' exact/>
-                <Route element={<RavenMiniCalculator/>} path='/calculator'/>
-                <Route element={<ErrorPage/>} path='*'/>
+                <Route Component={RavenApp} path='/home' exact/>
+                <Route Component={RavenMiniCalculator} path='/calculator'/>
+                <Route Component={ErrorPage} path='*'/>
             </Routes>
         </Router>
     )
