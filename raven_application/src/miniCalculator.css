@@ -23,7 +23,7 @@ body{
 .calculator{
     width: inherit;
     /* border: var(--border); */
-    height: 320px;
+    height: 360px;
     border-radius: 10px;
 }
 .header{
