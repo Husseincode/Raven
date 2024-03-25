@@ -7,6 +7,8 @@ import { details } from './details'
 import './miniCalculator.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBackspace, faCircle, faDivide, faEquals, faMinus, faMobileAndroidAlt, faMultiply, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { data } from './data'
+import { Link } from 'react-router-dom'
 
 const RavenMiniCalculator = () => {
     const [loading, setIsLoading] = useState(true);
@@ -107,6 +109,19 @@ const RavenMiniCalculator = () => {
                                 <FontAwesomeIcon icon={faEquals}/>
                             </button>
                         </div>
+                    </div>
+                </section>
+                <section className='recommendations text-secondary'>
+                    <h4>Others</h4>
+                    <div className='others'>
+                    {
+                        data.map(item => {
+                            const { name, href } = item;
+                            return (
+                                <Link className='btn btn-sm btn-secondary' to={href}>{name}</Link>
+                            )
+                        })
+                    }
                     </div>
                 </section>
             </main>
