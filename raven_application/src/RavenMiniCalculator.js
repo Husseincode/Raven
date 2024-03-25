@@ -26,11 +26,7 @@ const RavenMiniCalculator = () => {
         setValue('');
     };
     const popLast = () => {
-        setValue(prevVal => {
-            let arr = prevVal.split();
-            arr.pop();
-            return arr;
-        })
+        setValue(prevVal => prevVal.slice(0, -1))
     };
     useEffect(()=>{
         window.addEventListener('load', ()=>{
@@ -77,7 +73,7 @@ const RavenMiniCalculator = () => {
                         </form>
                         <div className='buttons'>
                             <button onClick={handleClear} value='clear' className='btn fw-bolder btn-danger text-white'>C</button>
-                            <button onClick={()=>{handleButton('/100')}} value='/100' className='btn btn-secondary fw-bolder text-white shadow'>%</button>
+                            <button onClick={()=>{handleButton('/100')}} value='/100' className='btn btn-secondary text-white shadow'>%</button>
                             <button onClick={popLast} value='back' className='btn btn-secondary'>
                                 <FontAwesomeIcon icon={faBackspace}/>
                             </button>
