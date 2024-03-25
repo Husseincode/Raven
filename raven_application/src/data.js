@@ -8,8 +8,8 @@ export const data = [
         name: 'Arithmetic progression',
         href: '#',
         img: img1,
-        notes: `Lorem ipsum dit amet nit amet
-        Lorem ipsum dit amet nt ameto fetd aikid`,
+        notes: `This calculates the arithmetic progression of series
+        of numbers`,
         id: 1,
         genre: 'sequence and series'
     },
@@ -17,8 +17,8 @@ export const data = [
         name: 'Geometric progression',
         href: '#',
         img: img2,
-        notes: `Lorem ipsum dit amet nit amet
-        Lorem ipsum dit amet nt ameto fetd aikid`,
+        notes: `This is designed to calculate the geometric progression of series of numbers and
+        others relating to it. such as the sum to infinity, sum of GP, e.t.c`,
         id: 2,
         genre: 'sequence and series'
     },
@@ -26,8 +26,7 @@ export const data = [
         name: 'Calculator',
         href: '/calculator',
         img: img3,
-        notes: `Lorem ipsum dit amet nit amet
-        Lorem ipsum dit amet nt ameto fetd aikid`,
+        notes: `Basic calculator that performs simple arithmetic tasks`,
         id: 3,
         genre: 'calculator'
     },
@@ -35,8 +34,8 @@ export const data = [
         name: 'Mensuration',
         href: '#',
         img: img4,
-        notes: `Lorem ipsum dit amet nit amet
-        Lorem ipsum dit amet nt ameto fetd aikid`,
+        notes: `This is designed to handle the shapes of a solid shapes, by finding the volume, surface area
+        and many more.`,
         id: 4,
         genre: 'solid shapes'
     },

@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import './RavenHeader.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faClose, faEnvelopeCircleCheck, faHome, faInfo, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { details } from './details'
 
 let button_style = {
     fontSize: '25px',
-    border: '2px solid lightgrey'
+    border: '2px solid lightgrey',
+    height: '55px',
 }
 const RavenHeader = ({title}) => {
     const [icon, setIcon] = useState(faBars);
@@ -45,6 +47,11 @@ const RavenHeader = ({title}) => {
             </nav>
         </header>
         <nav style={attributes} className='overflow shadow bg-dark'>
+            <div className='dashboard'>
+                <Link to='/home' className='text-secondary'>Home <FontAwesomeIcon icon={faHome}/></Link>
+                <Link to='/about' className='text-secondary'>About <FontAwesomeIcon icon={faInfoCircle}/></Link>
+                <Link to={details.email} className='text-secondary'>Developer <FontAwesomeIcon icon={faEnvelopeCircleCheck}/></Link>
+            </div>
         </nav>
         </>
     )

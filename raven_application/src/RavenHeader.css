@@ -37,12 +37,33 @@ header > nav > h1{
     padding: 25px 10px;
     transition: 1s;
     visibility: hidden;
+    display: grid;
+    place-content: center;
     /* border: var(--border); */
 }
 .overflow_head{
     text-decoration: none;
     font-size: 25px;
     color: white;
+}
+
+.dashboard{
+    width: 200px;
+    height: 300px;
+    /* border: var(--border); */
+    display: grid;
+    place-content: center;
+}
+.dashboard > a{
+    /* color: whitesmoke; */
+    width: 100px;
+    text-align: right;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-top: 10px;
+}
+.dashboard > a:hover{
+    border-bottom: 1px solid dodgerblue;
 }
 
 @media screen and (min-width: 1024px){

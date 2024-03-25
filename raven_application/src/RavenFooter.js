@@ -1,24 +1,39 @@
 import React from 'react'
 import './RavenFooter.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faWhatsapp, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import { data } from './data'
 
 const RavenFooter = ({title, whatsappHref, twitterHref, email, gitHubHref}) => {
     return (
         <footer className='text-secondary bg-dark'>
             <section className='text-center'>
                 <h3>{title}</h3>
-                <p>Lorem ipsum dit amet Lorem ipsum dit amet Lorem ipsum dit amet</p>
+                <p>
+                    {title} is an online web application that is meticulously designed to
+                    solve complex mathematical problem, it has {data.length} calculators that are
+                    built in and 
+                    are fully functional and accurate in processing result.
+                    should you happento encounter some error in the program, do not hesistate to tip us,
+                    your little piece of info could help the web application to get even better.
+                </p>
                 <div className='icons'>
-                    <FontAwesomeIcon href={gitHubHref} title='Github' className='icon_style' icon={faGithub}/>
-                    <FontAwesomeIcon title='Emaiil' className='icon_style' icon={faEnvelope}>
-                        <a href={email}>l</a>
-                    </FontAwesomeIcon>
-                    <FontAwesomeIcon href={whatsappHref} title='Whatsapp' className='icon_style' icon={faWhatsapp}/>
-                    <FontAwesomeIcon href={twitterHref} title='X' className='icon_style' icon={faTwitter}/>
+                    <Link title='Github' className='icon_style text-secondary' to={gitHubHref}>
+                        <FontAwesomeIcon icon={faGithub}/>
+                    </Link>
+                    <Link title='Email' className='icon_style text-secondary' to={email}>
+                        <FontAwesomeIcon className='icon_style' icon={faEnvelopeCircleCheck}/>
+                    </Link>
+                    <Link title='Whatsapp' className='icon_style text-secondary' to={whatsappHref}>
+                        <FontAwesomeIcon className='icon_style' icon={faWhatsapp}/>
+                    </Link>
+                    <Link title='Twitter' className='icon_style text-secondary' to={twitterHref}>
+                        <FontAwesomeIcon className='icon_style' icon={faXTwitter}/>
+                    </Link>
                 </div>
-                <p>&copy;{title} <time>2024</time></p>
+                <p className='p-1'>&copy;{title} <time>2024</time></p>
             </section>
         </footer>
     )
