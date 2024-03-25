@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 const RavenNav = () => {
     return (
-        <Router>
+        <Router basename='/home'>
             <Routes>
                 <Route Component={RavenApp} path='/home' exact/>
                 <Route Component={RavenMiniCalculator} path='/calculator'/>
