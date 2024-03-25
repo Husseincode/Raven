@@ -16,7 +16,8 @@ const RavenMain = ({title}) => {
     };
     const searchValue = (e) => {
         const newSearch = data.filter(item => {
-            return (item.name.charAt(0).toUpperCase().includes(str));
+            String.prototype.normalize()
+            return (item.name.normalize().includes(str));
         });
         if (str === ''){
             setCards(data);
