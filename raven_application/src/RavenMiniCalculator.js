@@ -1,26 +1,26 @@
+/* eslint-disable no-eval */
 import React, { useEffect, useState } from 'react'
 import RavenHeader from './RavenHeader'
 import RavenFooter from './RavenFooter'
 import LoadingScreen from './LoadingScreen'
 import { details } from './details'
 import './miniCalculator.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 const RavenMiniCalculator = () => {
     const [loading, setIsLoading] = useState(true);
     const [value, setValue] = useState('');
 
-    const handleButton = (e) => {
-        let newValue = e.target.value;
-        if (newValue === 'clear')
-        {
-            setValue('');
-        }
-        else if (newValue === '=')
-        {
-            setValue(prevVal => {return prevVal + newValue});
-        }
-        setValue(prevVal => {return prevVal + newValue});
+    const handleButton = (getValue) => {
+        setValue(prevVal => prevVal + getValue);
     }
+    const calculate = () => {
+        setValue(eval(value).toString())
+    };
+    const handleClear = () => {
+        setValue('');
+    };
     useEffect(()=>{
         window.addEventListener('load', ()=>{
             setIsLoading(false);
@@ -41,7 +41,7 @@ const RavenMiniCalculator = () => {
         <>
         <RavenHeader title={details.title}/>
         {
-            <main>
+            <main className='mini_main'>
                 <section className='details'>
                     <h2 className='text-secondary'>{details.title} Calculator</h2>
                     <p className='text-secondary p-1'>
@@ -52,28 +52,35 @@ const RavenMiniCalculator = () => {
                     </p>
                 </section>
                 <section className='calculator_outlay text-dark'>
-                    <div className='calculator'>
-                        <div className='header'></div>
+                    <div className='calculator shadow-lg'>
+                        <div style={{display: 'flex', justifyContent: 'space-between'}} className='header'>
+                            <span style={{padding: '10px'}}>
+                                <FontAwesomeIcon className='text-success' icon={faCircle}/>
+                                <FontAwesomeIcon style={{marginLeft: '5px'}} className='text-danger' icon={faCircle}/>
+                                <FontAwesomeIcon style={{marginLeft: '5px'}} className='text-warning' icon={faCircle}/>
+                            </span>
+                            <span style={{fontSize: '20px', padding: '10px'}}>{details.title}</span>
+                        </div>
                         <form>
-                            <input disabled type='number' value={value}/>
+                            <input disabled value={value}/>
                         </form>
                         <div className='buttons'>
-                            <button onClick={handleButton} value={7} className='btn btn-dark'>7</button>
-                            <button onClick={handleButton} value={8} className='btn btn-dark'>8</button>
-                            <button onClick={handleButton} value={9} className='btn btn-dark'>9</button>
-                            <button onClick={handleButton} value='clear' className='btn btn-danger'>A.C</button>
-                            <button onClick={handleButton} value={4} className='btn btn-dark'>4</button>
-                            <button onClick={handleButton} value={5} className='btn btn-dark'>5</button>
-                            <button onClick={handleButton} value={6} className='btn btn-dark'>6</button>
-                            <button onClick={handleButton} value='+' className='btn btn-primary'>+</button>
-                            <button onClick={handleButton} value={3} className='btn btn-dark'>3</button>
-                            <button onClick={handleButton} value={2} className='btn btn-dark'>2</button>
-                            <button onClick={handleButton} value={1} className='btn btn-dark'>1</button>
-                            <button onClick={handleButton} value='-' className='btn btn-primary'>-</button>
-                            <button onClick={handleButton} value={0} className='btn btn-dark'>0</button>
-                            <button onClick={handleButton} value='.' className='btn btn-dark'>.</button>
-                            <button onClick={handleButton} value='/100' className='btn btn-dark'>%</button>
-                            <button onClick={handleButton} value='=' className='btn btn-success'>=</button>
+                            <button onClick={()=>{handleButton('7')}} value='7' className='btn btn-dark'>7</button>
+                            <button onClick={()=>{handleButton('8')}} value='8' className='btn btn-dark'>8</button>
+                            <button onClick={()=>{handleButton('9')}} value='9' className='btn btn-dark'>9</button>
+                            <button onClick={handleClear} value='clear' className='btn btn-danger'>A.C</button>
+                            <button onClick={()=>{handleButton('4')}} value={4} className='btn btn-dark'>4</button>
+                            <button onClick={()=>{handleButton('5')}} value={5} className='btn btn-dark'>5</button>
+                            <button onClick={()=>{handleButton('6')}} value={6} className='btn btn-dark'>6</button>
+                            <button type='button' onClick={()=>{handleButton('+')}} className='btn btn-primary'>+</button>
+                            <button onClick={()=>{handleButton('3')}} value={3} className='btn btn-dark'>3</button>
+                            <button onClick={()=>{handleButton('2')}} value={2} className='btn btn-dark'>2</button>
+                            <button onClick={()=>{handleButton('1')}} value={1} className='btn btn-dark'>1</button>
+                            <button onClick={()=>{handleButton('-')}} value='-' className='btn btn-primary'>-</button>
+                            <button onClick={()=>{handleButton('0')}} value={0} className='btn btn-dark'>0</button>
+                            <button onClick={()=>{handleButton('.')}} value='.' className='btn btn-dark'>.</button>
+                            <button onClick={()=>{handleButton('/100')}} value='/100' className='btn btn-dark'>%</button>
+                            <button onClick={calculate} value='=' className='btn btn-success'>=</button>
                         </div>
                     </div>
                 </section>

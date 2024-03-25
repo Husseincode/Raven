@@ -9,6 +9,10 @@ body{
 header{
     height: 70px;
     width: var(--width);
+    position: fixed;
+    top: 0;
+    margin-bottom: 100px;
+    z-index: 1;
 }
 
 header > nav{

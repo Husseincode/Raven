@@ -9,6 +9,7 @@ body{
 }
 .mainPage{
     width: var(--width);
+    margin-top: 70px;
     /* border: var(--border); */
 }
 

@@ -36,14 +36,15 @@ const RavenHeader = ({title}) => {
         <>
         <header className='shadow bg-dark'>
             <nav>
-                <h1 className='text-white'>{title}</h1>
+                <h1>
+                    <Link className='text-white' style={{textDecoration: 'none'}} to='/home'>{title}</Link>
+                </h1>
                 <button style={button_style} className='btn text-secondary bg-light' type='button'>
                     <FontAwesomeIcon onClick={handleClick} icon={icon}/>
                 </button>
             </nav>
         </header>
         <nav style={attributes} className='overflow shadow bg-dark'>
-            <Link to='/home' className='overflow_head'>{title}</Link>
         </nav>
         </>
     )

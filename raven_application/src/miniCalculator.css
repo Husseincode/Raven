@@ -7,6 +7,9 @@ body{
     margin: 0;
     padding: 0;
 }
+.mini_main{
+    margin-top: 70px;
+}
 .details{
     padding: var(--alignment);
 }
@@ -19,8 +22,8 @@ body{
 }
 .calculator{
     width: inherit;
-    border: var(--border);
-    /* height: 600px; */
+    /* border: var(--border); */
+    height: 320px;
     border-radius: 10px;
 }
 .header{
