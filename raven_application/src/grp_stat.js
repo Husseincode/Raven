@@ -24,14 +24,7 @@ const GrpStat = () => {
 
     const getNumber = () => {
         let num = window.prompt('Enter length of the number...');
-        let getParent = document.querySelector('.encap_boundary');
-        let i = 0;
-
-        while (i < num)
-        {
-            getParent.append(CreateBoundary());
-            i++;
-        }
+        setValue(parseInt(num));
     };
     useEffect(()=>{
         window.addEventListener('load', ()=>{
@@ -71,7 +64,9 @@ const GrpStat = () => {
                             </button>
                         </div>
                         <div className='encap_boundary'>
-                            <CreateBoundary/>
+                            {/* {
+                               value && <CreateBoundary/>
+                            } */}
                         </div>
                     </div>
                     {/* <div className='result'></div> */}
