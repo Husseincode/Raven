@@ -1,0 +1,83 @@
+$height: 700px;
+$margin-top: 70px;
+$aligment: 10px 15px;
+
+@mixin border($color: dodgerblue, $pixel: 1px){
+    border: $pixel solid $color;
+}
+.grp_main{
+    // min-height: $height;
+    margin-top: $margin-top;
+    padding: $aligment;
+    @include border(dodgerblue, 3px);
+    
+    .grp_stat{
+        height: 300px;
+        margin-top: 10px;
+        // @include border;
+
+        form{
+            // @include border;
+            height: inherit;
+            display: flex;
+            flex-direction: row;
+        }
+        form > div{
+            padding: 10px;
+            // height: 30px;
+            flex-grow: 1;
+            border-radius: 10px;
+            @include border(grey, 1px)
+        }
+    }
+}
+// .grp_main > section{
+//     @include border(dodgerblue, 3px)
+// }
+.recommendation{
+    // @include border;
+    margin-top: 10px;
+    padding: 0px;
+    // min-height: 200px;
+
+    // div{
+    //     // height: 100px;
+    //     // padding: 10px;
+    //     @include border
+    // }
+    .others{
+        margin-bottom: 10px;
+        margin-left: 5px;
+    }
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+.inputs > div{
+    margin-top: 10px;
+}
+.inputs > div:first-child{
+    margin-top: 0px;
+    display: flex;
+    justify-content: right;
+    // @include border(grey, 1px);
+}
+.inputs > div:first-child > button{
+    margin-left: 5px;
+}
+.inputs > div:last-child{
+    height: 100%;
+}
+.boundary{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.boundary > input{
+    width: 70px;
+    padding-left: 5px;
+}
+.boundary > input:last-child{
+    margin-left: 10px;
+}

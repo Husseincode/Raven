@@ -21,7 +21,7 @@ const RavenMiniCalculator = () => {
         try {
             setValue(eval(value).toString())   
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     };
     const handleClear = () => {
@@ -118,7 +118,7 @@ const RavenMiniCalculator = () => {
                         data.map(item => {
                             const { name, href } = item;
                             return (
-                                <Link className='btn btn-sm btn-secondary' to={href}>{name}</Link>
+                                <Link type='button' to={href} className='btn btn-sm btn-secondary'>{name}</Link>
                             )
                         })
                     }

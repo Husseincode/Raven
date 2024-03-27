@@ -11,7 +11,7 @@ const RavenFooter = ({title, whatsappHref, twitterHref, email, gitHubHref}) => {
         <footer className='text-secondary bg-dark'>
             <section className='text-center'>
                 <h3>{title}</h3>
-                <p>
+                <p className='footer_text'>
                     {title} is an online web application that is meticulously designed to
                     solve complex mathematical problem, it has {data.length} calculators that are
                     built in and 

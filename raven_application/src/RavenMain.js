@@ -75,6 +75,7 @@ const RavenMain = ({title}) => {
                         <option value='calculator'>Calculator</option>
                         <option value='solid shapes'>Mensuration</option>
                         <option value='sequence and series'>Sequence and series</option>
+                        <option value='statistics'>statistics (grouped data)</option>
                     </select>
                 </form>
                 <div className='cards'>

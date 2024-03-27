@@ -30,11 +30,17 @@ body{
     width: var(--width);
     height: 50px;
 }
+.calculator > form{
+    display: grid;
+    place-content: center;
+}
 .calculator > form > input{
     width: var(--width);
     height: 80px;
     font-size: 30px;
     padding: 0px 10px;
+    /* font-size: 20px; */
+    /* margin: 0px 10px; */
 }
 .buttons{
     width: var(--width);
@@ -49,13 +55,13 @@ body{
 .recommendations{
     width: var(--width);
     /* border: var(--border); */
-    height: 300px;
     padding: var(--alignment);
+    /* margin: 0px 0px 30px; */
 }
 .others > .btn:first-child{
     margin-left: 0px;
 }
 .others > .btn{
-    margin-left: 10px;
+    margin-left: 5px;
     margin-bottom: 10px;
 }

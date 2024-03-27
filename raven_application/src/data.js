@@ -39,4 +39,13 @@ export const data = [
         id: 4,
         genre: 'solid shapes'
     },
+    {
+        name: 'Statistics (grouped data)',
+        href: '/grp_stat',
+        img: img4,
+        notes: `This is designed to handle the shapes of a solid shapes, by finding the volume, surface area
+        and many more.`,
+        id: 4,
+        genre: 'statistics'
+    },
 ]

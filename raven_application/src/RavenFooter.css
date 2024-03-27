@@ -21,6 +21,9 @@ footer > section{
     /* margin-top: 10px; */
     /* height: 200px; */
 }
+/* .footer_text{
+    border: var(--border);
+} */
 .icons{
     font-size: 20px;
     /* display: flex; */
