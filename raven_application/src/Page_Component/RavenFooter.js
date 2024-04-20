@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faWhatsapp, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-import { data } from './data'
+import { data } from '../Data/data'
 
 const RavenFooter = ({title, whatsappHref, twitterHref, email, gitHubHref}) => {
     return (

@@ -1,0 +1,13 @@
+.notify{
+    height: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: whitesmoke;
+    z-index: 2;
+    transition: 1s;
+}

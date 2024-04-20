@@ -3,7 +3,7 @@ import './RavenHeader.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faClose, faEnvelopeCircleCheck, faHome, faInfo, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-import { details } from './details'
+import { details } from '../Data/details'
 
 let button_style = {
     fontSize: '25px',

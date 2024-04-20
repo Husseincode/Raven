@@ -1,7 +1,7 @@
-import img1 from './assets/finance.jpg'
-import img2 from './assets/strategy.jpg'
-import img3 from './assets/tech.png'
-import img4 from './assets/ethics.png'
+import img1 from '../assets/finance.jpg'
+import img2 from '../assets/strategy.jpg'
+import img3 from '../assets/tech.png'
+import img4 from '../assets/ethics.png'
 
 export const data = [
     {
@@ -45,7 +45,16 @@ export const data = [
         img: img4,
         notes: `This is designed to handle the shapes of a solid shapes, by finding the volume, surface area
         and many more.`,
-        id: 4,
+        id: 5,
+        genre: 'statistics'
+    },
+    {
+        name: 'Statistics (ungrouped data)',
+        href: '/ungrp_stat',
+        img: img4,
+        notes: `This is designed to handle the shapes of a solid shapes, by finding the volume, surface area
+        and many more.`,
+        id: 6,
         genre: 'statistics'
     },
 ]

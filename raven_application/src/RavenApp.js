@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import LoadingScreen from './LoadingScreen'
+import LoadingScreen from './Loading_Screen/LoadingScreen'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import RavenHeader from './RavenHeader'
-import RavenMain from './RavenMain'
-import RavenFooter from './RavenFooter'
-import { details } from './details'
+import RavenHeader from './Page_Component/RavenHeader'
+import RavenMain from './Page_Component/RavenMain'
+import RavenFooter from './Page_Component/RavenFooter'
+import { details } from './Data/details'
 
 const RavenApp = () => {
     const [loading, setIsLoading] = useState(true);

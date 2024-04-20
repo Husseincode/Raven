@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './RavenMain.css'
-import { data } from './data';
+import { data } from '../Data/data';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';

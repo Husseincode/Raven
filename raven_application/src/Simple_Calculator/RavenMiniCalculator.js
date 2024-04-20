@@ -1,13 +1,13 @@
 /* eslint-disable no-eval */
 import React, { useEffect, useState } from 'react'
-import RavenHeader from './RavenHeader'
-import RavenFooter from './RavenFooter'
-import LoadingScreen from './LoadingScreen'
-import { details } from './details'
-import './miniCalculator.css'
+import RavenHeader from '../Page_Component/RavenHeader'
+import RavenFooter from '../Page_Component/RavenFooter'
+import LoadingScreen from '../Loading_Screen/LoadingScreen'
+import { details } from '../Data/details'
+import './MiniCalculator.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBackspace, faCircle, faDivide, faEquals, faMinus, faMobileAndroidAlt, faMultiply, faPlus } from '@fortawesome/free-solid-svg-icons'
-import { data } from './data'
+import { data } from '../Data/data'
 import { Link } from 'react-router-dom'
 
 const RavenMiniCalculator = () => {
@@ -116,9 +116,9 @@ const RavenMiniCalculator = () => {
                     <div className='others'>
                     {
                         data.map(item => {
-                            const { name, href } = item;
+                            const { name, href, id } = item;
                             return (
-                                <Link type='button' to={href} className='btn btn-sm btn-secondary'>{name}</Link>
+                                <Link key={id} type='button' to={href} className='btn btn-sm btn-secondary'>{name}</Link>
                             )
                         })
                     }

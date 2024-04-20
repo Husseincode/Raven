@@ -2,7 +2,7 @@ $height: 700px;
 $margin-top: 70px;
 $aligment: 10px 15px;
 
-@mixin border($color: dodgerblue, $pixel: 1px){
+@mixin border($color: lightgrey, $pixel: 1px){
     border: $pixel solid $color;
 }
 .grp_main{
@@ -17,7 +17,7 @@ $aligment: 10px 15px;
         // @include border;
 
         form{
-            // @include border;
+            @include border;
             height: inherit;
             display: flex;
             flex-direction: row;

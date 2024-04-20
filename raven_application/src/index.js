@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import RavenNav from './RavenNav'
+import RavenNav from './Navigation/RavenNav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const container = document.getElementById('root');

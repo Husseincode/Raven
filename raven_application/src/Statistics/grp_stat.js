@@ -1,15 +1,24 @@
 /* eslint-disable no-array-constructor */
 import React, { useEffect, useState } from 'react'
-import RavenHeader from './RavenHeader'
-import RavenFooter from './RavenFooter'
-import { details } from './details'
+import RavenHeader from '../Page_Component/RavenHeader'
+import RavenFooter from '../Page_Component/RavenFooter'
+import { details } from '../Data/details'
 import './grp_stat.scss'
-import { data } from './data'
+import { data } from '../Data/data'
 import { Link } from 'react-router-dom'
-import LoadingScreen from './LoadingScreen'
+import LoadingScreen from '../Loading_Screen/LoadingScreen'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestion, faRefresh, faUpload } from '@fortawesome/free-solid-svg-icons'
-import Notification from './Message/notification'
+import Notification from '../Message/notification'
+
+const CreateBoundary = () =>{
+    return (
+        <div className='boundary'>
+            <input placeholder='lower boundary' style={{flexGrow: '1'}} type='number'/>
+            <input placeholder='Upper boundary' style={{flexGrow: '1'}} type='number'/>
+        </div>
+    )
+}
 
 const GrpStat = () => {
     const [loading, setIsLoading] = useState(true);
@@ -17,14 +26,6 @@ const GrpStat = () => {
     const [element, setElement] = useState([]);
     const [notifyErr, setNotifyErr] = useState(false);
 
-    const CreateBoundary = () =>{
-        return (
-            <div className='boundary'>
-                <input placeholder='lower boundary' style={{flexGrow: '1'}} type='number'/>
-                <input placeholder='Upper boundary' style={{flexGrow: '1'}} type='number'/>
-            </div>
-        )
-    }
     const getNumber = () => {
         let num = parseInt(window.prompt('Enter length of the number...'));
         if(Number.isInteger(num)){
